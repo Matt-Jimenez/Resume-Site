@@ -1,186 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matthew Anthony Jimenez</title>
-    <meta name="description" content="Portfolio of Matthew A. Jimenez, showcasing skills in Cybersecurity, IT, and Data Science.">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="Pictures/CS4A.png" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-</head>
-<body>
-    <header>
-        <h1>Matthew A. Jimenez</h1>
-        <p>Security + | Cyber Security Entry Lvl | Data Science Graduate | IT Senior Sys Admin | IT Field Tech</p>
-    </header>
+# Prepare to inject resume-based content into a revised HTML file
+revised_resume_html_path = "/mnt/data/index_resume_integrated.html"
 
-    <nav>
+# We will construct a new HTML version using the resume details
+resume_html_content = revised_html_content.replace(
+    "<section id=\"experience\">",
+    """<section id="experience">
+    <h2>Experience</h2>
+    <div class="job">
+        <h3>IT Security Analyst – Allied Universal</h3>
+        <p><strong>Via Robert Half</strong> | May 2023 – June 2025</p>
         <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#education">Education & Certifications</a></li>
-            <li><a href="#Projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="blog.html">Blog</a></li>
+            <li>Aided internal customers with hardware/software issues</li>
+            <li>Maintained hardware (PCs, notebooks, printers)</li>
+            <li>Provided app training & support</li>
+            <li>User account admin and network security tasks</li>
         </ul>
-    </nav>
+    </div>
+    <div class="job">
+        <h3>Sr. End User Support Specialist – Rivian</h3>
+        <p>Plymouth, MI | May 2021 – Feb 2023</p>
+        <ul>
+            <li>Microsoft 365 and SharePoint setup/licensing</li>
+            <li>Account management via Active Directory</li>
+            <li>Remote support for BYOD devices (iOS/Android)</li>
+            <li>ServiceNow ticketing, documentation, and SOPs</li>
+        </ul>
+    </div>
+    <div class="job">
+        <h3>T1 Support Engineer – Integritek</h3>
+        <p>Covina, CA | Jun 2019 – Mar 2021</p>
+        <ul>
+            <li>Remote and on-site tech support for SMB clients</li>
+            <li>Windows OS, Office365, printer troubleshooting</li>
+            <li>ConnectWise ticketing and Active Directory support</li>
+        </ul>
+    </div>
+    <div class="job">
+        <h3>L1 Service Desk Analyst – Taco Bell Corp.</h3>
+        <p>Irvine, CA | Aug 2017 – Jun 2019</p>
+        <ul>
+            <li>First-level phone/chat/email tech support</li>
+            <li>LAN/WAN and vendor dispatch coordination</li>
+            <li>Remote install and support of computer peripherals</li>
+        </ul>
+    </div>
+    <div class="job">
+        <h3>Computer Support Engineer – Pricon Enterprise</h3>
+        <p>Anaheim, CA | Oct 2014 – Aug 2017</p>
+        <ul>
+            <li>Setup and upgrades for iOS/Android government devices</li>
+            <li>Active Directory management and remote support</li>
+            <li>Office apps and peripheral device troubleshooting</li>
+        </ul>
+    </div>"""
+)
 
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <img src="Pictures/MJimenezHS.jpg" alt="Matthew Jimenez headshot" class="profile-picture">
-                <div class="about-text">
-                    <p>Hi, I’m Matthew Jimenez — an IT professional with 10+ years in technical support, now shifting into cybersecurity. 
-                        I’ve worked across MSPs and enterprises like Allied Universal, specializing in access management and scripting. 
-                        Through Correlation One’s DS4A and CS4A programs, I’ve sharpened my skills in data analytics, OSINT, and security tooling. 
-                        I enjoy simplifying complex topics and creating real-world projects like phishing simulators and Azure AD hardening labs. 
-                        I’m eager to grow with a security-first team.</p>
+# Save to new file
+with open(revised_resume_html_path, "w", encoding="utf-8") as file:
+    file.write(resume_html_content)
 
-                    <p>Outside of work, I’m a father of two and proud owner of Scottish Terriers. I enjoy video games, content creation, reading, and sports. Always eager to connect, feel free to reach out for professional inquiries or to chat about how IT intersects with our everyday interests.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="Skills">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Entry Level Cybersecurity</h3>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-chalkboard-teacher"></i>
-                    <h3>Educator</h3>
-                </div>
-                <div class="skill-item">
-                    <i class="fa-regular fa-pen-to-square"></i>
-                    <h3>Content Creator</h3>
-                </div>
-                <div class="skill-item">
-                    <i class="fa-brands fa-teamspeak"></i>
-                    <h3>Help/Service Desk support</h3>
-                </div>
-                <div class="skill-item">
-                    <i class="fa-solid fa-wand-sparkles"></i>
-                    <h3>Automation</h3>
-                </div>
-                <div class="skill-item">
-                    <i class="fa-brands fa-windows"></i>
-                    <i class="fa-brands fa-apple"></i>
-                    <i class="fa-brands fa-linux"></i>
-                    <h3>Windows, Mac, & Linux</h3>
-                </div>
-                <div class="skill-item">
-                    <i class="fa-solid fa-people-arrows"></i>
-                    <h3>Communication</h3>
-                </div>
-                <div class="skill-item">
-                    <i class="fa-solid fa-cubes-stacked"></i>
-                    <h3>Project Management</h3>
-                </div>
-                <!-- Add more skills as needed -->
-            </div>
-        </section>
-
-        <section id="experience">
-            <h2>Work Experience</h2>
-            <div class="experience-grid">
-                <div class="experience-item">
-                    <h3>Cyber Security Content Creator / Teachers Aide</h3>
-                    <p class="company">Correlation One</p>
-                    <p class="date">05/2023 – Present</p>
-                        <ul>
-                            <li><i class="fas fa-shield-alt"></i> Collaborate with consultants and Correlation One's Content team to develop a cybersecurity syllabus, instructional materials, and learning objectives (including CompTIA Security+ certification)</li>
-                            <li><i class="fas fa-code"></i> Attend weekly and ad hoc meetings to ensure curriculum development stays on track.</li>
-                            <li><i class="fa-solid fa-file-pen"></i> Write and edit lesson plans, presentations, and assessments that align with learning objectives and quality standards.</li>
-                            <li><i class="fas fa-search"></i> Review and revise content for accuracy, clarity, and inclusivity.</li>
-                            <li><i class="fa-solid fa-person-digging"></i> Work with the project team to ensure timely delivery of course materials, meeting deadlines and milestones.</li>
-                        </ul>
-                        <h3>Security Analyst</h3>
-                        <p class="company">Allied Universal</p>
-                        <p class="date">03/2023 – Present</p>
-                            <ul>
-                                <li><i class="fas fa-shield-alt"></i> Collaborate with consultants and Correlation One's Content team to develop a cybersecurity syllabus, instructional materials, and learning objectives (including CompTIA Security+ certification)</li>
-                                <li><i class="fas fa-code"></i> Attend weekly and ad hoc meetings to ensure curriculum development stays on track.</li>
-                                <li><i class="fa-solid fa-file-pen"></i> Write and edit lesson plans, presentations, and assessments that align with learning objectives and quality standards.</li>
-                                <li><i class="fas fa-search"></i> Review and revise content for accuracy, clarity, and inclusivity.</li>
-                                <li><i class="fa-solid fa-person-digging"></i> Work with the project team to ensure timely delivery of course materials, meeting deadlines and milestones.</li>
-                            </ul>
-                </div>
-                
-            </div>
-        </section>
-
-        <section id="Education">
-            <h2>Education & Certifications</h2>
-            <div class="education-grid">
-                <div class="education-item">
-                    <img src="Pictures/CompTIA_Security_Certificate.png" width="200" height="200" alt="Python Project">
-                    <h3>Security Plus</h3>
-                    <p>CompTia Security+ Feb 2023</p>
-                </div>
-                <div class="education-item">
-                    <img src="Pictures/CS4A.png" width="200" height="200" alt="Python Project">
-                    <h3>Correlation 1 Bootcamp</h3>
-                    <p>CyberSecurity Bootcamp Nov 2022</p>
-                </div>
-                <div class="education-item">
-                    <img src="Pictures/CyberSent_DoD.png" width="140" height="200" alt="Python Project">
-                    <h3>Correlation One DoD</h3>
-                    <p>Participant of CTF Challenge</p>
-                </div>
-                <div class="education-item">
-                    <img src="Pictures/DS4A.png" width="140" height="200" alt="Python Project">
-                    <h3>Correlation 1 Bootcamp</h3>
-                    <p>Data Science/ Analytics Sep 2021</p>
-                </div>
-                
-                <!-- Add more education items as needed -->
-            </div>
-        </section>
-
-        <section id="Projects">
-            <h2>Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                  <h3>Python Projects Showcase</h3>
-                  <img src="Pictures/python-project.png" width="200" height="200" alt="Python Project">
-                  <p>A collection of various projects demonstrating Python skills.</p>
-                  <a href="https://github.com/Matt-Jimenez/" target="_blank">View on GitHub</a>
-                </div>
-
-            </section>
-
-        
-        <section id="contact">
-            <h2>Contact</h2>
-            <div class="contact-grid">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <p></p>
-                    <a href="mailto:jimenez_m88@outlook.com?subject=Hello there!&body=I wanted to reach out because...">Feel free to email me</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-linkedin"></i>
-                    <p></p>
-                    <a href="https://www.linkedin.com/in/matthewanthonyjimenez" target="_blank">Matthew A. Jimenez</a>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-github"></i>
-                    <p></p>
-                    <a href="https://github.com/Matt-Jimenez" target="_blank">Matt-Jimenez</a>
-                </div>
-                
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Matthew A. Jimenez. All rights reserved.</p>
-    </footer>
-</body>
-</html>
-
+revised_resume_html_path
