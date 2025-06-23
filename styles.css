@@ -541,3 +541,41 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+
+.skills-columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.skills-column h3 {
+    margin-bottom: 1rem;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.skills-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-column li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.skills-column i {
+    width: 1.5rem;
+    color: #007BFF;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .skills-columns {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
