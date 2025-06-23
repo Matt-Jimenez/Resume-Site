@@ -579,3 +579,48 @@ button:hover {
         gap: 1rem;
     }
 }
+
+/* Experience Cards Grid */
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.experience-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    padding: 1rem;
+    transition: all 0.3s ease-in-out;
+    height: 240px;
+    position: relative;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    height: auto;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.experience-card h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.experience-card p {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #7f8c8d;
+}
+
+.experience-card ul {
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.experience-card li {
+    margin-bottom: 0.4rem;
+}

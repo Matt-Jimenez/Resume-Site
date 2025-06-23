@@ -17,6 +17,53 @@
         .cert-gallery img { width: 150px; margin: 10px; }
         .resume-button { padding: 10px 20px; background: #007BFF; color: white; border-radius: 5px; text-decoration: none; }
     </style>
+
+<style>
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.experience-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    padding: 1rem;
+    transition: all 0.3s ease-in-out;
+    height: 240px;
+    position: relative;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    height: auto;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.experience-card h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.experience-card p {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #7f8c8d;
+}
+
+.experience-card ul {
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.experience-card li {
+    margin-bottom: 0.4rem;
+}
+</style>
+
 </head>
 <body>
     <header>
@@ -39,15 +86,17 @@
 
     <main>
         
+
 <section id="about">
     <h2>About Me</h2>
-    <div class="about-content">
-        <img src="Pictures/MJimenezHS.jpg" alt="Matthew Jimenez headshot" class="profile-picture">
-        <div class="about-text">
+    <div class="about-content" style="display: flex; flex-wrap: wrap; align-items: center; gap: 2rem;">
+        <img src="Pictures/MJimenezHS.jpg" alt="Matthew Jimenez headshot" class="profile-picture" style="flex: 0 0 120px;">
+        <div class="about-text" style="flex: 1;">
             <p>Hi, I’m Matthew Jimenez — an IT professional with 10+ years in technical support, now shifting into cybersecurity. I’ve worked across MSPs and enterprises like Allied Universal, specializing in access management and scripting. Through Correlation One’s DS4A and CS4A programs, I’ve sharpened my skills in data analytics, OSINT, and security tooling. I enjoy simplifying complex topics and creating real-world projects like phishing simulators and Azure AD hardening labs. Proud dad, Scottie owner, and gamer at heart — I’m eager to grow with a security-first team.</p>
         </div>
     </div>
 </section>
+
 
 
         <section id="skills" class="skills">
@@ -82,74 +131,7 @@
             </div>
         </section>
 
-        <section id="experience">
-    <h2>Experience</h2>
-    <div class="job">
-        <h3>IT Security Analyst – Allied Universal</h3>
-        <p><strong>Via Robert Half</strong> | May 2023 – June 2025</p>
-        <ul>
-            <li>Aided internal customers with hardware/software issues</li>
-            <li>Maintained hardware (PCs, notebooks, printers)</li>
-            <li>Provided app training & support</li>
-            <li>User account admin and network security tasks</li>
-        </ul>
-    </div>
-    <div class="job">
-        <h3>Sr. End User Support Specialist – Rivian</h3>
-        <p>Plymouth, MI | May 2021 – Feb 2023</p>
-        <ul>
-            <li>Microsoft 365 and SharePoint setup/licensing</li>
-            <li>Account management via Active Directory</li>
-            <li>Remote support for BYOD devices (iOS/Android)</li>
-            <li>ServiceNow ticketing, documentation, and SOPs</li>
-        </ul>
-    </div>
-    <div class="job">
-        <h3>T1 Support Engineer – Integritek</h3>
-        <p>Covina, CA | Jun 2019 – Mar 2021</p>
-        <ul>
-            <li>Remote and on-site tech support for SMB clients</li>
-            <li>Windows OS, Office365, printer troubleshooting</li>
-            <li>ConnectWise ticketing and Active Directory support</li>
-        </ul>
-    </div>
-    <div class="job">
-        <h3>L1 Service Desk Analyst – Taco Bell Corp.</h3>
-        <p>Irvine, CA | Aug 2017 – Jun 2019</p>
-        <ul>
-            <li>First-level phone/chat/email tech support</li>
-            <li>LAN/WAN and vendor dispatch coordination</li>
-            <li>Remote install and support of computer peripherals</li>
-        </ul>
-    </div>
-    <div class="job">
-        <h3>Computer Support Engineer – Pricon Enterprise</h3>
-        <p>Anaheim, CA | Oct 2014 – Aug 2017</p>
-        <ul>
-            <li>Setup and upgrades for iOS/Android government devices</li>
-            <li>Active Directory management and remote support</li>
-            <li>Office apps and peripheral device troubleshooting</li>
-        </ul>
-    </div>
-            <h2>Experience</h2>
-            <div class="job">
-                <h3>Access Management Analyst – Allied Universal</h3>
-                <p><strong>Via Robert Half</strong> | 2023 – Present</p>
-                <ul>
-                    <li>Provisioned/deprovisioned access to enterprise systems</li>
-                    <li>Maintained compliance and access reviews</li>
-                </ul>
-            </div>
-            <div class="job">
-                <h3>IT Technician – MSP Roles</h3>
-                <p>2015 – 2022</p>
-                <ul>
-                    <li>Supported hundreds of users across SMB clients</li>
-                    <li>Diagnosed system and network issues</li>
-                    <li>Deployed software, hardware, and cloud tools</li>
-                </ul>
-            </div>
-        </section>
+        
 
         <section id="education">
             <h2>Education & Certifications</h2>
@@ -190,6 +172,60 @@
             <p>LinkedIn: <a href="https://linkedin.com/in/mattajimenez">mattajimenez</a></p>
             <p>GitHub: <a href="https://github.com/Matt-Jimenez">Matt-Jimenez</a></p>
         </section>
-    </main>
+    
+<section id="experience">
+    <h2>Experience</h2>
+    <div class="experience-grid">
+        <div class="experience-card">
+            <h3>IT Security Analyst – Allied Universal</h3>
+            <p>May 2023 – June 2025</p>
+            <ul>
+                <li>Aid internal customers with hardware/software issues</li>
+                <li>Configure/maintain PCs, notebooks, and printers</li>
+                <li>Maintain network security and user account administration</li>
+                <li>Create documentation and assist on IT projects</li>
+            </ul>
+        </div>
+        <div class="experience-card">
+            <h3>Sr. End User Support Specialist – Rivian</h3>
+            <p>May 2021 – Feb 2023</p>
+            <ul>
+                <li>Account setup with Microsoft 365, Teams, and SharePoint</li>
+                <li>Used Active Directory to manage accounts and access</li>
+                <li>Provided remote support for mobile and desktop users</li>
+                <li>Maintained SOPs and managed ServiceNow tickets</li>
+            </ul>
+        </div>
+        <div class="experience-card">
+            <h3>T1 Support Engineer – Integritek</h3>
+            <p>June 2019 – Mar 2021</p>
+            <ul>
+                <li>Provided support via ConnectWise and on-site visits</li>
+                <li>Troubleshot Windows, Office apps, and printers</li>
+                <li>Configured AD accounts and network drives</li>
+            </ul>
+        </div>
+        <div class="experience-card">
+            <h3>L1 Service Desk Analyst – Taco Bell Corp.</h3>
+            <p>Aug 2017 – June 2019</p>
+            <ul>
+                <li>Provided phone/email/chat support for store systems</li>
+                <li>Diagnosed LAN/WAN connectivity and hardware issues</li>
+                <li>Worked with vendors for issue dispatch</li>
+            </ul>
+        </div>
+        <div class="experience-card">
+            <h3>Computer Support Engineer – Pricon Enterprise</h3>
+            <p>Oct 2014 – Aug 2017</p>
+            <ul>
+                <li>Deployed and configured Windows machines and mobile devices</li>
+                <li>Worked with AD, software installs, and network troubleshooting</li>
+                <li>Traveled to client sites for projects and repairs</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+</main>
 </body>
 </html>
