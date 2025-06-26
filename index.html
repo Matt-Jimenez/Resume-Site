@@ -8,62 +8,6 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="Pictures/CS4A.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <style>
-        body { font-family: Arial, sans-serif; scroll-behavior: smooth; }
-        header, nav, section { margin: 20px; }
-        nav ul { list-style: none; display: flex; gap: 15px; padding: 0; }
-        nav ul li a { text-decoration: none; }
-        .skills ul, .job ul { list-style: none; padding-left: 0; }
-        .cert-gallery img { width: 150px; margin: 10px; }
-        .resume-button { padding: 10px 20px; background: #007BFF; color: white; border-radius: 5px; text-decoration: none; }
-    </style>
-
-<style>
-.experience-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    margin-top: 1rem;
-}
-
-.experience-card {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    overflow: hidden;
-    padding: 1rem;
-    transition: all 0.3s ease-in-out;
-    height: 240px;
-    position: relative;
-}
-
-.experience-card:hover {
-    transform: translateY(-5px);
-    height: auto;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
-
-.experience-card h3 {
-    margin-top: 0;
-    color: #2c3e50;
-}
-
-.experience-card p {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    color: #7f8c8d;
-}
-
-.experience-card ul {
-    padding-left: 1rem;
-    margin-top: 0.5rem;
-}
-
-.experience-card li {
-    margin-bottom: 0.4rem;
-}
-</style>
-
 </head>
 <body>
     <header>
@@ -85,61 +29,119 @@
     </nav>
 
     <main>
-        
-
-<section id="about">
-    <h2>About Me</h2>
-    <div class="about-content" style="display: flex; flex-wrap: wrap; align-items: center; gap: 2rem;">
-        <img src="Pictures/MJimenezHS.jpg" alt="Matthew Jimenez headshot" class="profile-picture" style="flex: 0 0 120px;">
-        <div class="about-text" style="flex: 1;">
-            <p>Hi, I’m Matthew Jimenez — an IT professional with 10+ years in technical support, now shifting into cybersecurity. I’ve worked across MSPs and enterprises like Allied Universal, specializing in access management and scripting. Through Correlation One’s DS4A and CS4A programs, I’ve sharpened my skills in data analytics, OSINT, and security tooling. I enjoy simplifying complex topics and creating real-world projects like phishing simulators and Azure AD hardening labs. Proud dad, Scottie owner, and gamer at heart — I’m eager to grow with a security-first team.</p>
-        </div>
-    </div>
-</section>
-
-
-
-        <section id="skills" class="skills">
-            <h2>Skills</h2>
-            <div class="skills-columns">
-                <div class="skills-column">
-                    <h3>Technical Skills</h3>
-                    <ul>
-                        <li><i class="fab fa-python"></i> Python Programming</li>
-                        <li><i class="fas fa-terminal"></i> PowerShell Scripting</li>
-                        <li><i class="fab fa-windows"></i> Windows Server Administration</li>
-                        <li><i class="fas fa-network-wired"></i> Network Security</li>
-                        <li><i class="fas fa-shield-alt"></i> Security+ Certified</li>
-                        <li><i class="fas fa-database"></i> SQL & Data Management</li>
-                        <li><i class="fas fa-chart-line"></i> Data Analysis</li>
-                        <li><i class="fas fa-cloud"></i> Cloud Services</li>
-                    </ul>
-                </div>
-                <div class="skills-column">
-                    <h3>Professional Skills</h3>
-                    <ul>
-                        <li><i class="fab fa-microsoft"></i> Microsoft 365 & SharePoint</li>
-                        <li><i class="fas fa-users-cog"></i> Active Directory Management</li>
-                        <li><i class="fas fa-mobile-alt"></i> Mobile Device Management (iOS/Android)</li>
-                        <li><i class="fas fa-ticket-alt"></i> ServiceNow & ConnectWise</li>
-                        <li><i class="fas fa-tasks"></i> Access Management</li>
-                        <li><i class="fas fa-file-alt"></i> Documentation & SOPs</li>
-                        <li><i class="fas fa-hands-helping"></i> Technical Support</li>
-                        <li><i class="fas fa-project-diagram"></i> System Administration</li>
-                    </ul>
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="Pictures/MJimenezHS.jpg" alt="Matthew Jimenez headshot" class="profile-picture">
+                <div class="about-text">
+                    <p>Hi, I’m Matthew Jimenez — an IT professional with 10+ years in technical support, now shifting into cybersecurity. I’ve worked across MSPs and enterprises like Allied Universal, specializing in access management and scripting. Through Correlation One’s DS4A and CS4A programs, I’ve sharpened my skills in data analytics, OSINT, and security tooling. I enjoy simplifying complex topics and creating real-world projects like phishing simulators and Azure AD hardening labs. Proud dad, Scottie owner, and gamer at heart — I’m eager to grow with a security-first team.</p>
                 </div>
             </div>
         </section>
+<section id="skills">
+  <h2>Skills</h2>
+  <h3>Technical Skills</h3>
+  <div class="skill-grid">
+    <div class="skill-item"><i class="fas fa-language"></i><span>Bilingual</span></div>
+    <div class="skill-item"><i class="fab fa-windows"></i><span>Windows/macOS/Linux</span></div>
+    <div class="skill-item"><i class="fas fa-network-wired"></i><span>Networking</span></div>
+    <div class="skill-item"><i class="fas fa-shield-alt"></i><span>Cybersecurity Tools</span></div>
+    <div class="skill-item"><i class="fab fa-microsoft"></i><span>Microsoft 365</span></div>
+    <div class="skill-item"><i class="fas fa-users-cog"></i><span>Active Directory</span></div>
+    <div class="skill-item"><i class="fas fa-terminal"></i><span>PowerShell / Python</span></div>
+    <div class="skill-item"><i class="fab fa-github"></i><span>Git / Bitbucket</span></div>
+    <div class="skill-item"><i class="fas fa-server"></i><span>Azure / VMware</span></div>
+  </div>
 
-        
+  <h3>Professional Skills</h3>
+  <div class="skill-grid">
+    <div class="skill-item"><i class="fas fa-comments"></i><span>Communication</span></div>
+    <div class="skill-item"><i class="fas fa-hands-helping"></i><span>Customer Service</span></div>
+    <div class="skill-item"><i class="fas fa-cogs"></i><span>Troubleshooting</span></div>
+    <div class="skill-item"><i class="fas fa-clipboard-list"></i><span>Documentation</span></div>
+    <div class="skill-item"><i class="fas fa-project-diagram"></i><span>Project Coordination</span></div>
+    <div class="skill-item"><i class="fas fa-user-check"></i><span>SLA Adherence</span></div>
+    <div class="skill-item"><i class="fas fa-balance-scale"></i><span>Compliance (SOX)</span></div>
+  </div>
+</section>
 
-        
-
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="experience-grid">
+    <div class="experience-card">
+      <img src="Pictures/Allied-Universal-Emblem.png" alt="Allied Universal Logo" class="company-logo" top-image>
+      <h3>IT Security Analyst – Allied Universal</h3>
+      <p>May 2023 – June 2025</p>
+      <p>Served as a frontline IT resource assisting with user support, systems troubleshooting, and network administration. Developed documentation and training, managed user accounts, and upheld internal security standards in a hybrid work environment.</p>
+    </div>
+    <div class="experience-card">
+      <img src="Pictures/rivian-logo.png" alt="Rivian Logo" class="company-logo" top-image>
+      <h3>Sr. End User Support Specialist – Rivian</h3>
+      <p>May 2021 – Feb 2023</p>
+      <p>Delivered enterprise-level support for Microsoft 365 and Active Directory users across hybrid platforms. Led technical resolutions, remote support, and device management while maintaining documentation and handling complex ticket workflows within ServiceNow.</p>
+    </div>
+    <div class="experience-card">
+      <img src="Pictures/Integritek.jpg" alt="Integritek Logo" class="company-logo" top-image>
+      <h3>T1 Support Engineer – Integritek</h3>
+      <p>June 2019 – Mar 2021</p>
+      <p>Provided tier-1 IT support via ConnectWise and on-site visits, addressing client needs across Windows environments, Office apps, and network peripherals. Supported remote work software and maintained documentation and escalations.</p>
+    </div>
+    <div class="experience-card">
+      <img src="Pictures/TBC.jpg" alt="Taco Bell Corp Logo" class="company-logo" top-image>
+      <h3>L1 Service Desk Analyst – Taco Bell Corp.</h3>
+      <p>Aug 2017 – June 2019</p>
+      <p>Handled first-level support for nationwide store systems, resolving LAN/WAN issues, hardware setups, and escalations with minimal supervision. Demonstrated strong call handling and remote assistance skills across multiple support channels.</p>
+    </div>
+    <div class="experience-card">
+      <img src="Pictures/Pricon-logo.png" alt="Pricon Enterprise Logo" class="company-logo" top-image>
+      <h3>Computer Support Engineer – Pricon Enterprise Technologies</h3>
+      <p>Oct 2014 – Aug 2017</p>
+      <p>Executed system setups, troubleshooting, and AD support for clients across various locations. Managed software rollouts, repairs, remote sessions, and escalation workflows for hardware and application-based issues.</p>
+    </div>
+  </div>
+</section>
+        <section id="education">
+            <h2>Education & Certifications</h2>
+            <div class="responsive-grid-container">
+                <div class="responsive-grid">
+                    <div class="grid-item" data-img="Pictures/CompTIA_Security_Certificate.png">CompTIA Sec+ Certified</div>
+                    <div class="grid-item" data-img="Pictures/CS4A.png">Cyber Security for All</div>
+                    <div class="grid-item" data-img="Pictures/DS4A.png">Data Science for All</div>
+                    <div class="grid-item" data-img="Pictures/Python-Cert.png">Python Certification</div>
+                    <div class="grid-item" data-img="Pictures/CyberSentinel_Participant_May2024.png">CyberSentinel DoD - 2024</div>
+                    <div class="grid-item" data-img="Pictures/CyberSentinel_Participant_June2025.png">CyberSentinel DoD - 2025</div>
+                    <div class="grid-item" data-img="Pictures/Intro-PenTest-Course.png">Intro to Pentesting</div>
+                    <div class="grid-item" data-img="Pictures/PWSH-CourseCompletion.png">Intro to PWSH Course</div>
+                    <div class="grid-item" data-img="Pictures/introduction_to_cip.png">OPSWAT ICIP</div>
+                </div>
+            </div>
+            <div id="cert-display" class="cert-preview">
+                <img id="cert-image" src="Pictures/placeholder.png" alt="Selected Certification" style="display:none;">
+            </div>
+        </section>
         <section id="projects">
             <h2>Projects</h2>
-            <p>See GitHub: <a href="https://matt-jimenez.github.io" target="_blank">matt-jimenez.github.io</a></p>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Python Projects</h3>
+                    <p>Includes CLI tools, data analysis scripts, and automation utilities written in Python.</p>
+                    <p><strong>Tech:</strong> Python, Pandas, Requests, OS Libraries</p>
+                    <a href="https://github.com/Matt-Jimenez/Python-Projects" target="_blank">View Repo</a>
+                </div>
+                <div class="project-card">
+                    <h3>Project Root (Cyber Tools)</h3>
+                    <p>A foundational cybersecurity toolkit with OSINT scripts and alerting logic.</p>
+                    <p><strong>Tech:</strong> Python, Shell, PowerShell</p>
+                    <a href="https://github.com/Matt-Jimenez/ProjectRoot" target="_blank">View Repo</a>
+                </div>
+                <div class="project-card">
+                    <h3>PowerShell O365 Automation</h3>
+                    <p>Automates Office 365 administrative tasks using PowerShell and modern auth.</p>
+                    <p><strong>Tech:</strong> PowerShell, Microsoft Graph, Azure AD</p>
+                    <a href="https://github.com/Matt-Jimenez/PowerShell-O365" target="_blank">View Repo</a>
+                </div>
+            </div>
         </section>
-
         <section id="resume">
             <h2>Resume</h2>
             <a href="resume.pdf" download class="resume-button">Download My Resume (PDF)</a>
@@ -151,83 +153,52 @@
             <p>LinkedIn: <a href="https://linkedin.com/in/mattajimenez">mattajimenez</a></p>
             <p>GitHub: <a href="https://github.com/Matt-Jimenez">Matt-Jimenez</a></p>
         </section>
-    
 
-
-<section id="experience">
-    <h2>Experience</h2>
-    <div class="experience-grid">
-        <div class="experience-card">
-            <h3>IT Security Analyst – Allied Universal</h3>
-            <p>May 2023 – June 2025</p>
-            <ul>
-                <li>Aid internal customers with hardware/software issues</li>
-                <li>Configure/maintain PCs, notebooks, and printers</li>
-                <li>Maintain network security and user account administration</li>
-                <li>Create documentation and assist on IT projects</li>
-            </ul>
-        </div>
-        <div class="experience-card">
-            <h3>Sr. End User Support Specialist – Rivian</h3>
-            <p>May 2021 – Feb 2023</p>
-            <ul>
-                <li>Account setup with Microsoft 365, Teams, and SharePoint</li>
-                <li>Used Active Directory to manage accounts and access</li>
-                <li>Provided remote support for mobile and desktop users</li>
-                <li>Maintained SOPs and managed ServiceNow tickets</li>
-            </ul>
-        </div>
-        <div class="experience-card">
-            <h3>T1 Support Engineer – Integritek</h3>
-            <p>June 2019 – Mar 2021</p>
-            <ul>
-                <li>Provided support via ConnectWise and on-site visits</li>
-                <li>Troubleshot Windows, Office apps, and printers</li>
-                <li>Configured AD accounts and network drives</li>
-            </ul>
-        </div>
-        <div class="experience-card">
-            <h3>L1 Service Desk Analyst – Taco Bell Corp.</h3>
-            <p>Aug 2017 – June 2019</p>
-            <ul>
-                <li>Provided phone/email/chat support for store systems</li>
-                <li>Diagnosed LAN/WAN connectivity and hardware issues</li>
-                <li>Worked with vendors for issue dispatch</li>
-            </ul>
-        </div>
-        <div class="experience-card">
-            <h3>Computer Support Engineer – Pricon Enterprise</h3>
-            <p>Oct 2014 – Aug 2017</p>
-            <ul>
-                <li>Deployed and configured Windows machines and mobile devices</li>
-                <li>Worked with AD, software installs, and network troubleshooting</li>
-                <li>Traveled to client sites for projects and repairs</li>
-            </ul>
-        </div>
-    </div>
-</section>
-<section id="education">
-            <h2>Education & Certifications</h2>
-            <ul>
-                <li>CompTIA Security+ Certified</li>
-                <li>CS4A – Cybersecurity (Correlation One)</li>
-                <li>DS4A – Data Science (Correlation One)</li>
-                <li>OPSWAT Introduction to Critical Infrastructure Protection</li>
-                <li>Introduction to Penetration Testing</li>
-                <li>PowerShell Course Completion</li>
-            </ul>
-            <div class="cert-gallery">
-                <img src="Pictures/CompTIA_Security_Certificate.png" alt="Security+">
-                <img src="Pictures/comptia-security-ce-certification.png" alt="Security+ CE">
-                <img src="Pictures/CS4A.png" alt="Cyber Security for All">
-                <img src="Pictures/DS4A.png" alt="Data Science for All">
-                <img src="Pictures/Python-Cert.png" alt="Python Certification">
-                <img src="Pictures/CyberSent_DoD.png" alt="CyberSent DoD">
-                <img src="Pictures/Intro-PenTest-Course.png" alt="Intro to Penetration Testing">
-                <img src="Pictures/PWSH-CourseCompletion.png" alt="PowerShell Course">
-                <img src="Pictures/opswat-introduction-to-critical-infrastructure-protection-icip.png" alt="OPSWAT ICIP">
+        <section id="badge-carousel">
+          <div class="carousel-container">
+            <img id="carousel-img" src="Pictures/comptia-security-ce-certification-badge.png" alt="Badge">
+            <div class="carousel-controls">
+              <button type="button" id="prev-badge">⬅</button>
+              <button type="button" id="next-badge">➡</button>
             </div>
+          </div>
         </section>
-</main>
+    </main>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.grid-item').forEach(item => {
+          item.addEventListener('click', () => {
+            const imgPath = item.getAttribute('data-img');
+            const certImg = document.getElementById('cert-image');
+            certImg.src = imgPath;
+            certImg.style.display = 'block';
+          });
+        });
+
+        // Badge carousel logic
+        const badgePaths = [
+          "Pictures/comptia-security-ce-certification-badge.png",
+          "Pictures/CyberSent_DoD-badge.png",
+          "Pictures/OPSWAT-Intro-to-CIP-badge.png",
+          "Pictures/python-badge.png",
+          "Pictures/PWSH-badge.png"
+        ];
+        let index = 0;
+        const carouselImg = document.getElementById('carousel-img');
+        document.getElementById('next-badge').addEventListener('click', function() {
+          index = (index + 1) % badgePaths.length;
+          carouselImg.src = badgePaths[index];
+        });
+        document.getElementById('prev-badge').addEventListener('click', function() {
+          index = (index - 1 + badgePaths.length) % badgePaths.length;
+          carouselImg.src = badgePaths[index];
+        });
+      });
+    </script>
+    <footer>
+        <p>&copy; 2025 Matthew A. Jimenez</p>
+        <p>Last updated: June 2025</p>
+    </footer>
 </body>
 </html>
