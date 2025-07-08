@@ -9,6 +9,15 @@
 </head>
 
 <body>
+  <div class="theme-toggle">
+    <i class="fas fa-sun"></i>
+    <label class="switch">
+      <input type="checkbox" id="themeSwitcher">
+      <span class="slider"></span>
+    </label>
+    <i class="fas fa-moon"></i>
+  </div>
+
   <header>
     <h1>Matthew A. Jimenez</h1>
     <p>Security+ | Cybersecurity | IT Systems Admin | Data Science | PowerShell & Python Developer</p>
@@ -23,7 +32,6 @@
       <li><a href="#certifications">Certifications</a></li>
       <li><a href="#projects">GitHub Projects</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a href="#blog">Blog</a></li>
       <li><a href="#resume">Resume</a></li>
       <li><a href="#badge-carousel">Badges</a></li>
     </ul>
@@ -379,5 +387,19 @@
       certImg.src = imgSrc;
       certImg.style.display = 'block';
     });
+  });
+</script>
+<script>
+  const themeToggle = document.getElementById("themeSwitcher");
+
+  // Check localStorage preference
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+    themeToggle.checked = true;
+  }
+
+  themeToggle.addEventListener("change", () => {
+    document.body.classList.toggle("dark-mode");
+    localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
   });
 </script>
