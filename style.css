@@ -1,49 +1,196 @@
-
 :root {
   --primary-color: #30232d;
   --secondary-color: #d55053;
   --bg-light: #f1c095;
   --bg-lighter: #fae9d7;
-}
 
-body {
-  background-color: var(--bg-lighter);
-  color: var(--primary-color);
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  --text-color: var(--primary-color);
+  --link-color: white;
+  --hover-color: var(--primary-color);
 }
 
 .dark-mode {
-  --primary-color: #f1c095;
-  --secondary-color: #fae9d7;
-  --bg-light: #30232d;
-  --bg-lighter: #1c1c1c;
+  --primary-color: #fafafa;
+  --secondary-color: #303030;
+  --bg-light: #1e1e1e;
+  --bg-lighter: #121212;
+  --text-color: #ffffff;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
   background-color: var(--bg-lighter);
-  color: var(--primary-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+}
+
+/* Nav */
+nav {
+  background-color: var(--secondary-color);
+  padding: 0.5rem;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0.5rem;
+}
+
+nav ul li a {
+  color: var(--link-color);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: var(--hover-color);
+}
+
+/* Main Content */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  flex: 1;
+  padding-bottom: 60px;
 }
 
 section {
   background-color: var(--bg-light);
-  margin: 2rem auto;
-  max-width: 800px;
+  margin-bottom: 2rem;
   padding: 1.5rem;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-footer {
-  text-align: center;
-  padding: 2rem;
-  background-color: var(--primary-color);
-  color: white;
+/* Typography */
+h2 {
+  color: var(--primary-color);
 }
 
+/* Resume Button */
 .resume-button {
   display: inline-block;
   padding: 1rem 2rem;
-  background: var(--secondary-color);
+  background-color: var(--secondary-color);
   color: white;
   border-radius: 30px;
   text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.resume-button:hover {
+  background-color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+/* Blog, Project, Skills Cards */
+.blog-grid, .project-grid, .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.blog-post, .project-card, .skill-item {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.blog-post:hover,
+.project-card:hover,
+.skill-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Buttons */
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--primary-color);
+}
+
+/* Carousel */
+.carousel-container img {
+  max-height: 120px;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.carousel-controls button {
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  border: none;
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.carousel-controls button:hover {
+  background-color: var(--primary-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 0.25rem 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .skills-grid,
+  .project-grid,
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
 }

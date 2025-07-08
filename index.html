@@ -1,126 +1,129 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Matthew Jimenez | Theme Switcher</title>
-  <link id="theme-style" rel="stylesheet" href="style-palette1.css">
-  <link rel="stylesheet" href="button-theme.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <style>
-    .nav-buttons {{
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-      margin-top: 2rem;
-    }}
-    .neo-button {{
-      width: 88px;
-      height: 88px;
-      background: linear-gradient(145deg, #2a2a2a, #171717);
-      border-radius: 20px;
-      box-shadow:
-        0 12px 16px rgba(0, 0, 0, 0.8),
-        inset 0 1px 0 rgba(255, 255, 255, 0.05);
-      border: 1px solid #2a2a2a;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #9890ee;
-      font-size: 24px;
-      transition: all 0.3s ease;
-    }}
-    .neo-button:hover {{
-      transform: scale(1.05);
-      background: linear-gradient(145deg, #1a1a1a, #000000);
-    }}
-    main {{
-      text-align: center;
-      margin-bottom: 2rem;
-    }}
-    section {{
-      margin: 3rem auto;
-      max-width: 800px;
-      padding: 2rem;
-      border-radius: 12px;
-      background: var(--bg-light, #ffffff);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }}
-    h2 {{
-      margin-bottom: 1rem;
-    }}
-    a.resume-button {{
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 1rem 2rem;
-      background: var(--primary-color, #333);
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-    }}
-    a.resume-button:hover {{
-      opacity: 0.85;
-    }}
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Matthew Jimenez - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Matthew Jimenez | Theme Switcher</h1>
-    <select id="theme-selector" onchange="changeTheme(this.value)">
-      <option value="palette1">Palette 1</option>
-      <option value="palette2">Palette 2</option>
-      <option value="palette3">Palette 3</option>
-      <option value="palette4">Palette 4</option>
-      <option value="palette5">Palette 5</option>
-      <option value="palette6">Palette 6</option>
-    </select>
+    <h1>Matthew A. Jimenez</h1>
+    <p>Security+ | Cybersecurity | IT Systems Admin | Data Science | PowerShell & Python Developer</p>
   </header>
+
+  <nav>
+    <ul>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#badges">Badges</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#projects">GitHub Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#blog">Blog</a></li>
+    </ul>
+  </nav>
+
   <main>
-    <p>Select a theme and navigate sections:</p>
-    <div class="nav-buttons">
-      <a href="#skills" class="neo-button" title="Skills"><i class="fas fa-tools"></i></a>
-      <a href="#projects" class="neo-button" title="Projects"><i class="fas fa-laptop-code"></i></a>
-      <a href="#resume" class="neo-button" title="Download Resume"><i class="fas fa-file-download"></i></a>
-    </div>
+    <section id="resume">
+      <h2>Download Resume</h2>
+      <a href="Matthew_Jimenez_Resume.pdf" class="resume-button" download>Download My Resume</a>
+    </section>
+
+    <section id="badges">
+      <h2>Event Badges</h2>
+      <div class="carousel-container">
+        <img id="badgeImage" src="images/comptia-security-ce-certification-badge.png" alt="Badge" />
+        <div class="carousel-controls">
+          <button onclick="prevBadge()">Prev</button>
+          <button onclick="nextBadge()">Next</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications">
+      <h2>My Certifications</h2>
+      <div class="skills-grid">
+        <!-- Certification image grid -->
+        <img src="images/CompTIA_Security_Certificate.png" alt="CompTIA Security+" class="skill-item">
+        <img src="images/CS4A.png" alt="CS4A" class="skill-item">
+        <img src="images/CyberSentinel_Participant_June2025.png" alt="Cyber Sentinel June 2025" class="skill-item">
+        <img src="images/DS4A.png" alt="DS4A Empowerment" class="skill-item">
+        <img src="images/introduction_to_cip.png" alt="CIP" class="skill-item">
+        <img src="images/Intro-PenTest-Course.png" alt="PenTest" class="skill-item">
+        <img src="images/PWSH-CourseCompletion.png" alt="PowerShell" class="skill-item">
+        <img src="images/Python-Cert.png" alt="Python" class="skill-item">
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>My GitHub Projects</h2>
+      <div class="project-grid" id="githubProjects"></div>
+    </section>
+
+    <section id="contact">
+      <h2>Connect With Me!</h2>
+      <p>
+        <a class="resume-button" href="https://github.com/Taco-ITDad" target="_blank">GitHub</a>
+        <a class="resume-button" href="https://linkedin.com/in/mattajimenez" target="_blank">LinkedIn</a>
+        <a class="resume-button" href="mailto:jimenez_m88@outlook.com">Email Me</a>
+      </p>
+    </section>
+
+    <section id="blog">
+      <h2>My Journey Blog</h2>
+      <div class="blog-grid">
+        <div class="blog-post">
+          <h3>Coming Soon...</h3>
+          <p>I’ll be documenting my tech journey, sharing cybersecurity tips and lessons learned.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <section id="skills">
-    <h2>🛠️ Skills</h2>
-    <p>Experienced in Microsoft 365, Active Directory, PowerShell, Python, Networking, and OSINT tools. Strong foundation in security operations and IT troubleshooting.</p>
-  </section>
-
-  <section id="projects">
-    <h2>💻 Projects</h2>
-    <ul>
-      <li>Advanced Encryption Tool (Python CLI & GUI)</li>
-      <li>PowerShell O365 Admin Toolkit</li>
-      <li>Data Analytics Automation Workflow</li>
-      <li>OSINT Toolkit for CTFs</li>
-    </ul>
-  </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: jimenez_m88@outlook.com</p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/mattajimenez">mattajimenez</a></p>
-            <p>GitHub: <a href="https://github.com/Matt-Jimenez">Matt-Jimenez</a></p>
-        </section>
-
-        <section id="badge-carousel">
-          <div class="carousel-container">
-            <img id="carousel-img" src="Pictures/comptia-security-ce-certification-badge.png" alt="Badge">
-            <div class="carousel-controls">
-              <button type="button" id="prev-badge">⬅</button>
-              <button type="button" id="next-badge">➡</button>
-            </div>
-          </div>
-        </section>
-    </main>
+  <footer>
+    <p>&copy; 2025 Matthew Jimenez. All rights reserved.</p>
+  </footer>
 
   <script>
-    function changeTheme(value) {{
-      document.getElementById('theme-style').href = 'style-' + value + '.css';
-    }}
+    const badgeImages = [
+      "images/comptia-security-ce-certification-badge.png",
+      "images/CyberSent_DoD-badge.png",
+      "images/OPSWAT-Intro-to-CIP-badge.png",
+      "images/PWSH-badge.png",
+      "images/python-badge.png",
+      "images/US Cyber open-Beginners Game room 2025.png"
+    ];
+    let currentBadge = 0;
+    const badgeEl = document.getElementById("badgeImage");
+
+    function showBadge(index) {
+      badgeEl.src = badgeImages[index];
+    }
+
+    function nextBadge() {
+      currentBadge = (currentBadge + 1) % badgeImages.length;
+      showBadge(currentBadge);
+    }
+
+    function prevBadge() {
+      currentBadge = (currentBadge - 1 + badgeImages.length) % badgeImages.length;
+      showBadge(currentBadge);
+    }
+
+    fetch('https://api.github.com/users/Taco-ITDad/repos')
+      .then(res => res.json())
+      .then(repos => {
+        const container = document.getElementById("githubProjects");
+        repos.slice(0, 6).forEach(repo => {
+          container.innerHTML += `
+            <div class="project-card">
+              <h3>${repo.name}</h3>
+              <p>${repo.description || "No description available."}</p>
+              <a href="${repo.html_url}" target="_blank">View Repo</a>
+            </div>
+          `;
+        });
+      });
   </script>
 </body>
 </html>
